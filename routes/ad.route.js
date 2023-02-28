@@ -6,7 +6,7 @@ const catOptions = ["clothing", "electronics", "furnitures", "others"];
 AdRouter.get("/get", async (req, res) => {
   try {
     const page = parseInt(req.query.page) - 1 || 0;
-    const limit = parseInt(req.query.limit) || 2;
+    const limit = parseInt(req.query.limit) || 4;
     const search = req.query.search || "";
     let sort = req.query.sort || "postedAt";
     let cat = req.query.cat || "All";
